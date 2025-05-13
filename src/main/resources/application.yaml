@@ -1,0 +1,3 @@
+application:
+  location:
+    api: https://api.postcodes.io/postcodes/
