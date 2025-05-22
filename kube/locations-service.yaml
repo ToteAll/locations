@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: locations-service
+  labels:
+    app: locations
+spec:
+  selector:
+    app: locations
+  ports:
+    - protocol: TCP
+      port: 80        # External port exposed by the service
+      targetPort: 8080 # Port where your Spring Boot app is listening inside the pod
+  type: NodePort  # Type of service (use NodePort or ClusterIP if needed)
